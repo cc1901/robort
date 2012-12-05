@@ -1,12 +1,8 @@
 package service;
 
-import Domain.ChatEngineAnswer;
-import Domain.ChatRequest;
-import Domain.ChatResponse;
 import chatEngine.ChatEngine;
 import org.codehaus.jackson.JsonNode;
 import org.junit.Test;
-import play.Logger;
 import utils.JsonTestDataCreator;
 
 import static org.hamcrest.CoreMatchers.is;

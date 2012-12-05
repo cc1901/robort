@@ -13,18 +13,10 @@ public class ChatEngineAnswer {
         this.context = context;
     }
 
-    public ChatResponse toChatResponse() {
-        ObjectNode jsonNodes = Json.newObject();
-        jsonNodes.put("answer", answer);
-        jsonNodes.put("context", context);
-        return new ChatResponse(jsonNodes);
-    }
-
     public JsonNode getChatResponse() {
         ObjectNode jsonNodes = Json.newObject();
         jsonNodes.put("answer", answer);
         jsonNodes.put("context", context);
-        ChatResponse chatResponse = new ChatResponse(jsonNodes);
-        return chatResponse.responseJsonNode;
+        return jsonNodes;
     }
 }
