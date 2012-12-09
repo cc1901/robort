@@ -5,7 +5,6 @@ import play.cache.Cache;
 import play.mvc.Controller;
 import play.mvc.Result;
 import service.ChatService;
-import service.SessionResolver;
 import views.html.index;
 
 public class Application extends Controller {
