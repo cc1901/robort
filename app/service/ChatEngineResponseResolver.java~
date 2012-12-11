@@ -1,0 +1,22 @@
+package service;
+
+import Domain.ChatEngineAnswer;
+
+class ChatEngineResponseResolver {
+    public static final String CONTEXT_CONTAINER = "<ChatStateContainer>";
+    public static final String CONTEXT_CONTAINER_END = "</ChatStateContainer>";
+
+    public ChatEngineAnswer getChatEngineResponse(String chatEngineAnswer) {
+<<<<<<< HEAD
+        if (!chatEngineAnswer.contains(CONTEXT_CONTAINER)) {
+=======
+        if (chatEngineAnswer.contains(CONTEXT_CONTAINER)) {
+>>>>>>> f101fc74a12106f2a614ae91447dee76a2ef6ab8
+            return new ChatEngineAnswer(chatEngineAnswer, "");
+        }
+        int indexOfContext = chatEngineAnswer.indexOf(CONTEXT_CONTAINER);
+        String newContext = chatEngineAnswer.substring(indexOfContext);
+        String answer = chatEngineAnswer.substring(0, indexOfContext);
+        return new ChatEngineAnswer(answer, newContext);
+    }
+}
