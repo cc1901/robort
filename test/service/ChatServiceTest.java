@@ -21,7 +21,7 @@ public class ChatServiceTest {
         JsonNode chatResponse = new ChatService(chatEngine).chatWithEngine(chatRequestJson);
 
         assertThat(chatResponse.findPath("answer").getTextValue(), is("answer"));
-        assertThat(chatResponse.findPath("context").getTextValue(), is("new context"));
+        assertThat(chatResponse.findPath("context").getTextValue(), is("<ChatStateContainer>new context</ChatStateContainer>"));
     }
 
     private ChatEngine createChatEngine(String answer, String context, String question) {
